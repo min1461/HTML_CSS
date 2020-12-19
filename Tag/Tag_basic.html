@@ -12,15 +12,24 @@
         <br>
         <!-- <table></table> -->
         <table border="2">
-        <tr>
-            <td>이름</td>    <td>성별</td>    <td>주소</td>
-        </tr>
-        <tr>
-            <td>강민규</td>    <td>남</td>    <td>김포</td>
-        </tr>
-        <tr>
-            <td>강다연</td>    <td>여</td>    <td>서울</td>
-        </tr>
+            <thead>
+                <tr>
+                    <th>이름</th>    <th>성별</th>    <th>주소</th>     <th>회비</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>강민규</td>    <td>남</td>    <td rowspan="2">김포</td>     <td>1000</td>
+                </tr>
+                <tr>
+                    <td>황동현</td>    <td>남</td>     <td>500</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">합계</td>   <td>1500</td>
+                </tr>
+            </tfoot>
         </table>
         <!-- table - tr - td -->
 
