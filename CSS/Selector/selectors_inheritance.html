@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            ul li{
+                color: red;
+                text-decoration: underline;
+            }
+            #lecture>li{
+                border: 1px solid red;
+                color: black;
+            }
+            /* selector>underselector{속성} */
+            /* 위구조를 가진 모든 구조에 같은 속성을 준다. */
+            ul,ol{
+                background-color: powderblue;
+            }
+            /* ,를 이용해 여러가지 셀렉터를 지정할수 있다. */
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <ol id="lecture">
+            <li>HTML</li>
+            <li>CSS
+                <ol>
+                    <li>selector</li>
+                    <li>declaration</li>
+                </ol>
+            </li>
+            <li>JavaScript</li>
+        </ol>
+    </body>
+</html>
