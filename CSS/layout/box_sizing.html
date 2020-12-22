@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div{
+                margin: 10px;
+                width: 150px;
+                box-sizing: border-box;
+            }
+            /*
+            기본 content-box
+            프론트의 안에 내용이 들어가는 content 의 width값은 같고,
+            border box로 설정했을경우에 width가 border를 기준으로 한다.
+            */
+            #small{
+                border: 10px solid black;
+            }
+            #large{
+                border: 30px solid black;
+            }
+            /* default&content-box의 경우 border값은 별개로 들어간다. */
+        </style>
+    </head>
+    <body>
+        <div id="small">Hello</div>
+        <div id="large">Hello</div>
+    </body>
+</html>
