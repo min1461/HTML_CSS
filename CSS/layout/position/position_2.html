@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #parent,#other,#grand{
+                border: 5px solid tomato;
+            }
+            #grand{
+                position: relative;
+            }
+            #me{
+                background-color: black;
+                color: white;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
+            /* default(position: static) 일경우, 부모 태그를 기준으로 움직이고 */
+            /* LRFB를 0으로 주었을 경우, */
+            /* position: absolute를 쓰게되면 html을 기준으로 px을 움직인다 */
+            /* 또한 me라는 태그는 부모 태그와 별개로 행동하게 된다. */
+            /* 부모태그가 position: relative되어 있으면, */
+            /* parent를 기준으로 자신의 오프셋 값을 정한다 */
+            /* 자식태그는 부모태그의 position이 default가 아닐때까지 기준이 되도록 올라간다. */
+        </style>
+    </head>
+    <body>
+        <div id="other">other</div>
+        <div id="grand">
+            grand
+            <div id="parent">
+                parent
+                <div id="me">me</div>
+            </div>
+        </div>
+    </body>
+</html>

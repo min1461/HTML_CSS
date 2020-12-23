@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                padding-top: 30px;
+            }
+            #parent,#other{
+                border: 5px solid tomato;
+            }
+            #large{
+                height: 10000px;
+                background-color: tomato;
+            }
+            #me{
+                background-color: black;
+                color: white;
+                position: fixed;
+                left: 0px;
+                top: 0px;
+                width: 100%;
+                text-align: center;
+                height: 30px;
+            }
+            /* fixed는 특정태그를 스크롤로 부터 독립되게 할때 사용 */
+            /* 광고창이나 배너 등은 fixed로 기술할수 있다. */
+            /* 부모 태그와 관계가 끊어짐 */
+        </style>
+    </head>
+    <body>
+        <div id="other">other</div>
+            <div id="parent">
+                parent
+                <div id="me">me</div>
+            </div>
+            <div id="large">large</div>
+    </body>
+</html>

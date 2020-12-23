@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .container{
+                background-color: powderblue;
+                height: 200px;
+                display: flex;
+                flex-direction: row;
+            }
+            /* display: flex를 쓰게되면 #item들은 #container안에서 동작한다. */
+            /* flex-direction: row-revers;를 쓰게되면 반대쪽에서 item들이 시작한다. */
+            /* flex-direction: column-revers;를 쓰게되면 반대쪽에서 item들이 시작한다. */
+            /* height가 더 클경우 reverse는 다르게 표시된다. */
+            .item{
+                background-color: tomato;
+                color: white;
+                border: 1px solid white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </body>
+</html>
+<!-- tabe -->
+<!-- table태그를 이용해 layout을 잡았으나 정보로서의 역할을 잃어버려서 -->
+<!-- html을 해석하는 SW에서 layout이 아닌 table로 구분해버려서 복잡해져버림 -->
+<!-- table은 수정이 매우 까다로움 등의 많은 문제로 table을 사용안하게 됨 -->
+
+<!-- position -->
+<!-- 각각의 태그를 적당한 위치로 옮기면서 사용을 해왔음 -->
+
+<!-- float -->
+<!-- img에 글씨가 흘러가게끔 하는 효과로 layout을 구성함 -->
+<!-- 만들기가 어려웠기때문에 사용을 안하게됨 -->
+
+<!-- flex -->
+<!-- 위 태그들은 사용 및 수정등에 문제가 많아 결국 flex를 사용하게 됨 -->
+<!-- container가 있는 태그들이어야 함    -->

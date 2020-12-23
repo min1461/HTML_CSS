@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html{
+                border: 1px solid gray;
+            }
+            div{
+                border: 5px solid tomato;
+                margin: 10px;
+            }
+            #me{
+                position: relative;
+                /* 오프셋 */
+                left: 100px;
+                top: 100px;
+                /* 부모태그에 상대적으로 이동 */
+                /* 두개가 동시에 있다면 우선순위는 left > right   top > bottom */
+                /* position: static -> 정적 LRTB가 동작을 하지않음. */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="other">other</div>
+        <div id="parent">
+            parent
+            <div id="me">me</div>
+        </div>
+    </body>
+</html>
