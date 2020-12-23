@@ -1,0 +1,31 @@
+<!-- media query - 반응형 디자인의 심장 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @media(min-width:601px){
+                body{
+                    background-color: blue;
+                }
+            }
+            @media(max-width:600px){
+                body{
+                    background-color: green;
+                }
+            }
+            @media(max-width:500px){
+                body{
+                    background-color: red;
+                }
+            }
+            /* 500px이하일때 body의 background-color를 red */
+            /* 나중에 나오는 것이 우선순위가 높아진다 */
+        </style>
+    </head>
+    <body>
+        max-width: 500px:red
+        501~600px:greed
+        601px~:blue
+    </body>
+</html>
