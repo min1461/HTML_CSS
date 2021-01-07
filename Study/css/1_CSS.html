@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            #myid{
+                color: green;
+                font: bold 20px Serif,Sans-serif;
+                /* font에서 순서는 font-style font-size font-family */
+            }
+            .redred{
+                color: red;
+            }
+            h1{
+                color: red;
+                text-align: center;
+                text-decoration: underline;
+            }
+            p{
+                font-size: 30px;
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="redred">나 색이 무슨색</div>
+        <div id="myid">나는 id로 디자인하네</div>
+
+        <h1>난 red 이지 말입니다.</h1>
+        <h3 style="color:violet;">난 보라이지 말입니다</h3>
+        <!-- html에 직접 디자인한 css -->
+        <p>나는 단락이고 크기는 30</p>
+
+        <font color="brown">html로 디자인</font><br>
+        <h2 class="redred">뭐야 으응 .은 클래스구나 그래서 레드네</h2>
+
+        <div class="class">뭐야 얘도 red네</div>
+
+        <span id="myid">뭐야3 으응 #은 id이구나 크기는 20</span>
+    </body>
+</html>
+<!-- 
+    CSS 3.0(Cascading Style Sheet)
+
+    <style> 태그 사용 주석은 /*  */
+        웹페이지 디자인
+        presentation logic vs business logic (개발시 분업 가능)
+        [사용법]
+        1)html에 삽입하여 사용 <h2 style=............>제목</h2>
+        2)태그사용 <style>정의해줌</style>
+        3)외부파일 만들고 호출해서 사용
+        <link rel="stylesheet"..........href="aa.css">
+
+        [코딩하기]
+        selector(선택자){속성 : 값;}
+        h1{ color : pink; }
+ -->

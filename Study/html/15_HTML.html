@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>input의 모든 것</title>
+    </head>
+    <body>
+        좋아하는 운동은?<br>
+        <input type="checkbox" name="woondong1" value="soccer">축구<br>
+        <input type="checkbox" name="woondong1" value="tennis">테니스<br>
+        <input type="checkbox" name="woondong1" value="golf">골프<br>
+        <!-- name은 같고 value만 다르게 -->
+        <br><br>
+        좋아하는 음식은?<br>
+        <input type="checkbox" name="food1" value="bread">빵<br>
+        <input type="checkbox" name="food1" value="milk">우유<br>
+        <input type="checkbox" name="food1" value="noodle">라면<br>
+        <br><br>
+        좋아하는 음식은?<br>
+        <input type="radio" name="choose1" value="cloth">옷<br>
+        <input type="radio" name="choose1" value="shoes">구두<br>
+        <input type="radio" name="choose1" value="back" checked>가방<br>
+        <br><br>
+        구매의견<br>
+        <!-- <textarea cols="30" rows="10"></textarea> -->
+        <textarea cols="30" rows="10">꼭 작성해주세요.</textarea>
+        <textarea cols="30" rows="10" onfocus="this.select()">꼭 작성해 주세요.</textarea>
+        <!-- onfocus="this.select" : 커서가 왔을때 안에 내용 선택 -->
+
+        <!-- 텍스트박스,리스트박스,콤보박스 -->
+        <br><br>
+        출발공항선택<br>
+        <select name="select1">
+            <option value="케네디공항">케네디공항</option>
+            <option value="인천공항" selected>인천공항</option>
+            <option value="도쿄공항">도쿄공항</option>
+        </select>
+        <br><br>
+        여러개 선택해<br><!-- 리스트박스(size,multiple) -->
+        <!-- select name="choice" size=3 -->
+        <select name="choice" size="3" multiple>
+            <option value="travel">여행</option>
+            <option value="health" selected>운동</option>
+            <option value="fishing">낚시</option>
+            <option value="clime">등산</option>
+            <option value="billiards">당구</option>
+        </select>
+        <!-- 위 listbox로 역시 value로 구분함 -->
+        <!-- 목록 크기를 size로 설정, 여러개 선택을 위해 multiple 사용 -->
+        <!-- (ctrl shift를 이용) -->
+        <!-- selected사용하여 디폴트 선택 -->
+        <br><br>
+        <input type="submit" value="가자 서버로">
+        <input type="reset" value="가긴뭘가~ 취소">
+    </body>
+</html>

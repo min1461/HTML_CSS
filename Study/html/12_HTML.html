@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>input의 모든 것</title>
+    </head>
+    <body bgcolor="gray" text="white">
+        <h1>소확행 모임 가입을 위해 나의 모든 것을 알려주마</h1>
+        <form action="hello.jsp" method="get"></form>
+        이름 <input type="text" name="irum" value="경석이" readonly>
+        <!-- readonly : 수정은 안되고 submit하면 "경석이"가 서버로 감 -->
+        비밀번호 <input type="password" name="pw" size="22" maxlength="15"><br>
+        <!-- size : 입력한에 한번에 보여지는 문자 개수의 최대길이 -->
+        <!-- maxlength : 입력한에 넣을 수 있는 문자의 최대 길이 -->
+        전화번호 <input type="tel" name="tel1"><br>
+        이메일 <input type="email" name="email1"><br>
+        생일년월 <input type="month" name="month1"><br>
+        생일년월일 <input type="date" name="date1"><br>
+        생일년월일(2000이상 가입안됨) <input type="date" max="1999-12-31" name="date2"><br>
+        생일은 1년중 몇번째주 <input type="week" name="week1"><br>
+        태어난시간 <input type="time" name="time1"><br>
+        현재localtime <input type="datetime-local" name="dtlocal1"><br>
+        좋아하는 색 <input type="color" name="color1" id="fc" onchange="document.body.style.backgroundColor=this.value"><br>
+        <!-- css에서는 background-color / 스크립트에서는 backgroundColor -->
+        <!-- css에서는 font-size        / 스크립트에서는 fontSize -->
+        <!-- 객체.속성=값 -->
+        좋아하는 숫자(0~100, 10단위) <input type="number" min="0" max="100" step="10" name="number1"><br>
+        성격(내성적~외향적)<br> 내성적 <input type="range" name="range1" min="1" max="101" step="10"> 외향적<br>
+        나의 홈페이지 주소 <input type="url" name="url"> <br>
+        <!-- url : http://를 안쓰면 입력하라고 함 -->
+        검색은 <input type="search" placeholder="검색할것 입력" name="search1"><br>
+        <!-- search : 크롬이나 사파리에서 뒤에 x가 나타남. -->
+        <input type="submit" value="아하~~~가자 서버로" name="submit1"><br><br>
+        # month date color number range url search를 사용해보자는
+    </body>
+</html>
