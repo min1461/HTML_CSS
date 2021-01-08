@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		/*
+		글씨와 경계선 사이 	->padding
+		---------------------------
+			경계선      		-> border
+		---------------------------
+		경계선과 다른것과의 간격 -> marggin */
+		h1{
+			color:red;
+			font-family:serif,돋움,바탕,Sans-serif;
+			border:3px dotted blue;
+			/* 경계선 :두께 디자인 색  // 
+			dashed double groove inset ridge outset solid */
+			margin:20px;
+			padding:100px;
+			text-shadow:7px 5px 3px #ffff00;
+		}
+		h2{
+			color:red;
+			font-family:serif,돋움,바탕,Sans-serif;
+			border:3px dotted red;
+			border-radius:20px; /*둥근모서리 */
+			text-shadow:5px 3px 5px #0000ff;
+		}
+		body{ background-color:rgb(255,245,235)}
+	</style>
+</head>
+<body>
+ 	
+	<h1>어떤글꼴</h1>
+	<div style="font-weight:500;font-size:50px;">
+		나야 500정도만 </div>
+	<div style="font-weight:bolder;font-style:italic;">
+		많이 잘먹겠습니다</div>
+	<div style="font-weight:lighter;font-style:italic;">
+		많이 잘먹겠습니다</div>
+	<!-- html에서 style태그형식을 사용 font-weigth:normal(400/100-900)
+		bold(700) bolder 더진하게 lighter 더 연하게  -->	
+
+	<h2 style="text-align:right">right 글자정렬</h2>	
+	<h2 style="text-align:center">center 글자정렬 </h2>
+	<h2 style="text-align:left">left 글자정렬</h2>
+	
+	<p style="text-indent:30pt"> 글자 들여쓰기</p>
+	
+	<p style="text-transform:capitalize"> babo ondal </p>
+	<p style="text-transform:uppercase"> babo ondal </p>
+	<p style="text-transform:lowercase"> BABO onDAL </p>
+
+</body>
+</html>

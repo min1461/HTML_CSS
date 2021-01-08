@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- <style>  /*박스겹침!!!!*/
+	*{margin:0;padding:0;}
+	#aa, #bb, #cc {
+					width:300px;
+					height:100px;
+					background-color:pink;
+				}
+	#aa{position:static;}
+	#bb{
+		position:absolute;
+		top:50px;
+		left:50px;
+		}
+	#cc{
+		position:absolute; /* ()0,0) 또는 상위요소로부터 절대거리*/
+		top:100px;
+		left:100px;
+		}
+	</style> -->
+	
+	 <style>  /*박스안겹침!!!!*/
+	*{margin:0;padding:0;}
+	#aa, #bb, #cc {
+					width:300px;
+					height:100px;
+					background-color:pink;
+				}
+	#aa{position:static;}
+	#bb{
+		position:relative;	/*상위요소로부터 상대적*/
+		left:300px;
+		}
+	#cc{
+		position:relative;
+		left:600px;
+		}
+	</style>
+</head>
+<body>
+	position - absolute와 relative 비교 
+	<div id="aa">
+	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	</div>
+
+	<div id="bb">
+	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	</div>
+	<div id="cc">
+	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	엄마야 누나야 강변살자
+	</div>
+
+</body>
+</html>
