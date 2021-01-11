@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            html,body{
+                padding: 0px;
+                border: 0px;
+            }
+            div{
+                display:table;
+                width:100%;
+            }
+            /* table parent, 즉<table>정의 */
+            /* 단, 보더에 대한 정의없으면 선은 없음 */
+
+            header{
+                color: blue;
+                background-color: yellow;
+                padding: 10px;
+                border-bottom: 2px solid gray;
+            }
+            nav{
+                display: table-cell;
+                color: red;
+                background-color: pink;
+                width: 20%;
+            }
+            section{
+                display: table-cell;
+                color: yellow;
+                background-color: blue;
+                width: 70%;
+            }
+            aside{
+                display: table-cell;
+                color: red;
+                background-color: cyan;
+                width: 10%;
+            }
+            footer{
+                color: white;
+                background-color: purple;
+                padding: 10px;
+                border-top: 2px solid gray;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>과일 주문</h1>
+        </header>
+        <div>
+        <nav>
+            <h1>메뉴</h1>
+            <ul>
+                <li><a href="#">사과메뉴</a></li>
+                <li><a href="#">배메뉴</a></li>
+                <li><a href="#">감메뉴</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h1>과일 평가</h1>
+            <article>
+                <h1>맛평가</h1>
+                정말 맛있어요
+            </article>
+            <article>
+                <h1>가성비평가</h1>
+                가격대비 가성비도 맘에 들어요
+            </article>
+        </section>
+        <aside> 
+            <h5>과수원 광고 방송</h5>
+            <ul> <li> <a href="#">가자 방송으로</a></li>  </ul>   
+          </aside>
+        </div>
+        <footer>
+            <address>과수원 주소</address>
+            <p>주소는  종로구 종로동 </p>
+            <p>대표자명 : 김종로</p>  
+        </footer>
+    </body>
+</html>
+<!-- 
+        Semantic tag 구조
+        -----------------------------------------------------
+                            header
+        -----------------------------------------------------
+        nav                 section                 aside
+                            article
+                            article
+        -----------------------------------------------------
+                            footer
+        -----------------------------------------------------
+-->
+<!-- 
+        Semantic tag(elements)란? tag에 특별한 의미를 지정한 것
+        ex) <header> : 헤더부분을 의미하고 헤더지정시에 사용
+            <nav> : navigation(링크부분)
+            <section> : 콘텐츠부분(h1~h6제목을 사용)
+                <article> : 개별 콘텐츠 부분(h1~h6제목을 사용)
+            <aside> : 옆공간부분(광고 등)
+            <footer> : 아래부분(주소 등)
+            <main> : 메인 콘텐츠를 의미
+ -->
