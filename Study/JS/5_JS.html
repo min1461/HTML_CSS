@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="bakkat.js" charset="UTF-8"></script>
+        <script>
+            function kaja(){
+                document.write("안녕 JS4","<br>");
+                //웹페이지 로딩중에는 먼저 출력, BUT 다로딩된후에는 먼저 것 다 지우고 출력
+                alert("안녕 JS-1구만"); // 우선순위
+                document.write("안녕 JS-2구만");
+                alert("안녕 JS-2구만"); // 우선순위
+            }
+        </script>
+    </head>
+    <body><!-- 이벤트 = "이벤트 처리함수();" -->
+        나도글자다1 <!-- onclick : JS이벤트 -->
+                    <!-- 따옴표 사용 주의 -->
+        <input type="button" value="눌러봐~1" onclick="alert('나도안녕','<br>')">
+        <input type="button" value="눌러봐~2" onclick="kaja()">
+        <!-- 주의 script 태그 없음 why? JS이벤트 in html -->
+        나도 글자다2
+    </body>
+</html>

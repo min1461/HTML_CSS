@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            var soobae = [100,2,10,3,1]
+            alert(soobae.sort())
+            //비정상 소트
+
+            var soobae10 = [100,200,500,350,170]
+            alert(soobae10.sort())
+            //정상 소트
+
+            var bae = [10, 300, 20, 40, 50];
+            alert(bae[0]);
+            bae.sort(function (a,b){
+                return a-b;
+            });
+            alert(bae);
+
+            bae.sort(function (a,b){
+                return b-a;
+            });
+            alert(bae);
+        </script>
+    </body>
+</html>

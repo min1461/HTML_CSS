@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            document.write("<h3>행운의 로또 번호 출력하기</h3>")
+            document.write("<h2>로또 10게임을 위해 새로고침 누르시오.</h2>")
+
+            // 랜덤값지정
+            var numbae = []
+            for(var i = 0; i < 6; i++){
+                var nums = Math.floor(Math.random()*45)+1
+                numbae.push(nums)
+                for (var j = 0; j < i; j++){
+                   if (numbae[i]==numbae[j]){
+                       numbae[j] = Math.floor(Math.random()*45)+1;
+	               }
+	            }
+                
+            }
+
+            //오름차순 정렬
+            numbae.sort(function (a,b){
+                return a-b;
+            });
+            
+            // 랜덤색상지정
+            for(var k = 0; k < numbae.length; k++){
+                var r = Math.floor(Math.random()*255)
+                var g = Math.floor(Math.random()*255)
+                var b = Math.floor(Math.random()*255)
+                var rgb = r+","+g+","+b // 255, 255, 0
+                document.write('<h1 style="color:rgb('+rgb+');>'+numbae[k-1]+'</h1>')
+                document.write('<h1 style="color:rgb('+rgb+');>'+numbae[k]+'</h1>')
+            }
+            // 왜 ,,,0,2,4인덱스값이 안나올까 ?^^;;;
+
+            // 테스트용...
+            document.write(numbae[0]+", ")
+            document.write(numbae[1]+", ")
+            document.write(numbae[2]+", ")
+            document.write(numbae[3]+", ")
+            document.write(numbae[4]+", ")
+            document.write(numbae[5])
+        </script>
+    </body>
+</html>

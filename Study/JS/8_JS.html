@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function grade(score){
+                if(isNaN(score)){
+                    document.write("숫자를 입력하세요.");
+                }else if(score==null){
+                    document.write("취소하셨네요.")
+                }else{
+                    switch(Math.floor(score/10)){
+                        case 10 :
+                        case 9 :
+                            document.write("A+");
+                            break;
+                        case 8 :
+                            document.write("A");
+                            break;
+                        case 7 :
+                            document.write("B+");
+                            break;
+                        case 6 :
+                            document.write("B");
+                            break;
+                        case 5 :
+                            document.write("C+");
+                            break;
+                        case 4 :
+                            document.write("C");
+                            break;
+                        default : 
+                            document.write("F");
+                            break;
+                    }
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var name = prompt("당신의 이름은","홍길동")
+            var score;
+            score = prompt("점수는");
+            grade(score);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="bakkat.js" charset="UTF-8"></script>
+        <script>
+            function whatclass(years){
+                if(years > 60){
+                    return document.write("실버반")
+                }else if(years>20){
+                    return document.write("골드반")
+                }else{
+                    return document.write("푸른반")
+                }
+            }
+        </script>
+    </head>
+    <body><!-- 웹페이지가 load할때 : 전체 웹페이지를 다 읽고 그다음 로딩 -->
+        <script>
+            var years;
+            years = prompt("회원번호 앞 2자리는","나이");
+            whatclass(years);
+        </script>
+    </body>
+</html>
