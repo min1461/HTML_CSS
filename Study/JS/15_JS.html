@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html id="htmlid">
+    <head id="headid">
+        <meta charset="UTF-8">
+        <script>
+            function kaja(){
+                alert(document.getElementById("aa").innerText);//처리할 범위표현
+                alert(document.getElementById("aa").innerHTML);// 채택
+                alert(document.getElementById("aa").outerText);
+                alert(document.getElementById("aa").outerHTML);// 채택
+                alert(document.getElementById("aa").textContent);//innerText,디자인 안됨
+            }// IE 4종류 w3c 2종류만 채택(innerHTML,outerHTML), chrome은 다 서비스
+            // 단, text처리를 위해서 textContent를 사용하면 된다.
+        </script>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <script>
+            alert("윈도우화면크기 :"+window.screen.width+" "+screen.height)
+            // BOM사용 : 윈도우객체.속성
+        </script>
+        <table id="aa">
+            <tr>
+                <th>love</th>
+            </tr>
+            <tr>
+                <td><h1 onclick="kaja()">I Love You</h1></td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html id="htmlid">
+    <head id="headid">
+        <meta charset="UTF-8">
+        <script>
+            function kaja(){
+                // IE only // 비표준 // IE 7,8 : tagName
+                alert("1st "+document.all.htmlid.nodeName)
+                //all태그 접근 + id이름을 가진 객체를 얻어 + 태그 name 출력
+                alert("2nd "+document.getElementById("htmlid").nodeName)//표준형
+                var headid = document.getElementById("headid") //접근 + 객체를 get
+                var str = headid.nodeName // 태그 name문자열
+                alert("3rd "+str) // 문자열 출력
+            }
+
+            function kaja2(){ //객체.속성(src)=값(이미지이름)
+                document.getElementById("imgid").src="bluechair.jpg"; //동적변경
+                var bodyid = document.getElementById(bodyid);
+                bodyid.style.backgroundColor="yellow";
+                // css속성을 javascript로 사용시 일반적인 방법은
+                // JS에서는 backgroundColor ==> CSS에서는 background-color
+                document.getElementById(bodyid).style.color="green";
+                document.getElementById(bodyid).style.fontSize="70px";
+            }
+        </script>
+    </head>
+    <body id="bodyid">
+        DOM이라는
+        <input type="button" value = "DOM의 접근버튼" onclick="kaja();"><br>
+        <img src="redchair.jpg" id="imgid">
+        <input type="button" value = "DOM의 동작변경" onclick="kaja2();"><br>
+    </body>
+</html>
+<!-- 
+    BOM VS DOM
+    BOM : Browser Object Model
+    window객체 등 자바스크립트에서 활용가능한 브라우저 관련 객체를 제공
+    ex) window.location = "http://www.naver.com"
+    (최상위) 객체.속성 = 값( OOP 작성 3단계중 정의와 생성은 구현되어있으므로 사용만 하면됨.)
+    Tree 구조로 표현된다
+                    window객체
+        ┌──────────────┼──────────────┐
+    [document]    [location]    ............
+      image
+      form
+
+    DOM : Document Object Model
+    document 구성원인 html, head 등에 "접근"이 가능하게 해준다
+    해당 구성원의 내용이나 색등을 "동적변경"이 가능하도록 해준다
+    body등의 태그를 자바 스크립트에서 사용하도록 객체로 만들어 준 것
+    html태그를 tree구조로 표현된다
+                    window객체 - 속성,메소드(location,alert())
+        ┌──────────────┼──────────────┐
+    [document]    [location]    ............
+      image
+      form
+      HEAD,TITLE,SPAN X
+      (getelementById같은게 DOM)
+ -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html id="htmlid">
+    <head id="headid">
+        <meta charset="UTF-8">
+        <script>
+            function nawa(){
+                var image = document.createElement("img"); //DOM <img
+                image.setAttribute("src","redchair.jpg");//<img src="fox.jpg"
+                image.setAttribute("id","chairchair");//<img src="redchair.jpg" id="chairchair"
+                document.form1.appendChild(image);
+                //여우그림을 누르면 이미지2개(화면 여우, 기린그림 다음에)
+                // <img src="redchair.jpg" id="chairchair"> // 기존
+                // <img src="bluechair.jpg" id="chairchair"> // 기존
+                // <img src="redchair.jpg" id="chairchair">
+            }
+
+            function soomja(){
+                if(document.getElementById("chairchair"))
+                var f = document.getElementById("chairchair")
+                f.parentNode.removeChild(document.getElementById("chairchair"))
+            }
+
+        </script>
+    </head>
+    <body>
+        <form name="form1">
+            <img src="redchair.jpg" onclick="nawa()">
+            <img src="bluechair.jpg" onclick="soomja()">
+        </form>
+    </body>
+</html>

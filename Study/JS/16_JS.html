@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html id="htmlid">
+    <head id="headid">
+        <meta charset="UTF-8">
+        <script>
+            function nawa(){
+                var chair1 = document.getElementById("chair");
+                chair1.innerHTML="<img src='redchair.jpg'>";
+            }
+
+            function kaja(){
+                var text1 = document.getElementById("textid");
+                text1.innerHTML="<h1>짜~~~~잔~~~~~</h1>";
+            }
+
+        </script>
+    </head>
+    <!-- 
+        value를 대체하는 속성(IE)
+        innerHTML 표준
+        innerText 표준
+        outerHTML 표준
+        outerText 표준
+     -->
+    <body>
+        <form name="form">
+            <img src="redchair.jpg" onclick="nawa()">
+            <div id="chair"></div><!-- 그림이 나올 공간을 준비 -->
+        </form>
+        <form>
+            <input  type="button" value="문자를 추가하자" onclick="kaja()">
+            <div id="textid"></div><!-- 글자가 나올 공간을 준비 -->
+        </form>
+    </body>
+</html>
