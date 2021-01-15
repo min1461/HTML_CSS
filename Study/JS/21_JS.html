@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            function mut(){
+                alert("멋있어")
+            }
+            function sa(){
+                alert("사랑해")
+            }
+            function ebbu(){
+                alert("이뻐")
+            }
+
+            function kajaCancel(){
+                if(event.stopPropagation)
+                //stopPropagation를 사용가능해, 표준형
+                    event.stopPropagation(); //FF chrome
+                else
+                    event.cancelBubble = true;//IE 7,8
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            document.addEventListener('click', function kocheon(){
+                alert("코딩천재~~capture라는")
+            },true);//true : capture하면 부모태그먼저 호출
+            document.onclick=ebbu
+            </script>
+        <div onclick="mut()">
+            나어때~~~
+        </div>
+        <div onclick="mut()">
+            <span onclick="sa();/* kajaCancel(); */">
+                신상 입은 나 어때~~~
+            </span>
+        </div>
+    </body>
+</html>
+
+<!-- 
+                    │                   ↑
+            capture │                   │bubble
+                    │                   │부모
+                    └───────────────────┘
+                        target(나)
+ -->
