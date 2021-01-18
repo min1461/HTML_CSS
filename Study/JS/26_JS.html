@@ -2,12 +2,31 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <!-- <body onload=웹페이지가 열리자마자 -->
         <script>
+            window.onload=function(){
+                kaja();
+            }
             
+            function kaja(){
+                window.open("26_JS_popup.html","popupWin", "width=370,height=300,top=20,left=350,location=no,menubar=0")
+                // location = no해도 주소표시줄 보임(IE는 안보임)(보안때문)
+                // window.open(인자1,인자2,인자3)메소드
+                // (팝업창url,별칭,옵션)
+            }
         </script>
     </head>
-    <body>
-
+    <body style="background-color: cyan;">
+        <h3>popup창열자</h3>
+        <pre>
+            <h2>
+                메인창 - 팝업창 열 예정
+                팝업창멋있게열리는구만
+                팝업창멋있게열리는구만
+                팝업창멋있게열리는구만
+            </h2>
+        </pre>
     </body>
 </html>
 <!-- 
@@ -18,14 +37,4 @@
 
     크롬에서 네이버띄우고 쿠키찾기
     F12(개발자도구) - application - storage - cookies 
-
-
-    쿠키작성전 팝업창 띄우기 ( 그런다음 쿠키설정 )
-    window.open("popupWin.html","popupWin1",
-    "width=370,height=300,top=20,left=350,location=no,menubar=0")
-
-    location=no해도 주소표시줄 보임(IE는 안보임)(보안때문,만일 피싱사이트라면?)
-    
-    window.open(인자1,인자2,인자3)메소드
-    (팝업창url,alias,옵션)
  -->

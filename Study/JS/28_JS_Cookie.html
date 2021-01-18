@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <!-- <body onload=웹페이지가 열리자마자 -->
+        <script>
+            // onunload는 popup창을 닫았다는 의미
+            window.unonload=function(){
+                kajaCookie();
+            }
+            function kajaCookie(){
+                if(document.f1.chk1.checked==true){
+                    // checkbox를 check 했으면 쿠키를 만들어서 1일동안 열리지 않게함
+                    var today1=new Date()/* 현재시각 */
+                    today1.setDate(today1.getDate()+1)/* 현재시각 +1일 */
+
+                    document.cookie = "informationCookie=kongji;expires="+ today1.toUTCString()
+                    
+                    
+                    //UTC:nuiversal time + coordinate (세계협정시)
+                    //toGMTString()은 이전 방식이므로 UCTString을 사용
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: yellow;">
+        <h3>오늘의 이벤트</h3>
+        <pre>
+            오늘 5시까지 3층 커피숍을 이용하시면
+            무료 시음권 2장 드립니다
+            많은 이용 바랍니다
+        </pre>
+        <hr>
+
+        <form name="f1">
+            <input type="checkbox" name="chk1">
+            지금부터 하루동안 이 창을 띄우지 않습니다.
+        </form>
+        <!-- <div onclick="self.close()">닫기</div> -->
+        <!-- 이문장 생략함 why? 크롬에서는 닫기긴 하지만 이벤트 unload 연결이 안됨. -->
+    </body>
+</html>
+
+<!-- 
+    개발자가 만든 .html 띄워 http://localhost에서 쿠키찾기
+    크롬 - 우클릭 - 검사 - 더보기 - application - Storage - cookie
+                    or
+    F12(개발자도구) - application(안보이면>>확장누름) - storage - cookies - 삭제는 x 엑박 (or http://localhost...- 우클릭 - clear)
+ -->

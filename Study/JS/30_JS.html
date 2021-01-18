@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+            window.onload=function(){
+                if(navigator.geolocation){
+                    // navigator객체 : 브라우저에 대한 정보등을 알아내는 객체
+                    // geolocation
+                    navigator.geolocation.getCurrentPosition(kajaWichi1)//현재위치
+                    //getCurrentPosition : 현재위치호출
+                    //kajaWichi1 호출
+                }
+            }
+            function kajaWichi1(wichi1){
+                var wido1 = wichi1.coords.latitude
+                var kyungdo1 = wichi1.coords.longitude
+                alert("위도는"+wido1+"경도는"+kyungdo1)
+            }
+        </script>
+    </head>
+    <body>
+        <!-- IE? Chrome? 어느게 더 정확??? -->
+        <h1>나의위치</h1>
+        <h3>위도와 경도를 알아보자</h3>
+        <h3>잘 나오는 구만~~</h3>
+    </body>
+</html>

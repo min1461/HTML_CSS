@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+        <!-- <body onload=웹페이지가 열리자마자 -->
+        <script>
+            function kaja(){
+                document.getElementById("p1").style.visibility="hidden";                
+            }
+            function kaja2(){
+                document.getElementById("p2").style.visibility="hidden";                
+            }
+        </script>
+    </head>
+    <body bgcolor="yellow">
+        메인내용<br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad non perferendis dolorem suscipit? Corporis officiis nihil dolores alias, totam aspernatur dignissimos cupiditate aut quasi, saepe voluptatem dolorem hic error.
+
+        <!-- 여기서부터는 popup부분 -->
+        <div id="p1" style="position: absolute; left: 350px; top: 100px; z-index:31; visibility: visible;">
+            <!-- z-index 값이 클수록 앞에 나온다 . -->
+            <table width=500 height=300>
+                <tr><td style="border: 2px #0000ff solid;"  bgcolor="pink">팝업 html내부에있다<br>
+                    만일 창을 닫으면 hidden이 된다</td></tr>
+                    <input type="button" value="닫기" onclick="kaja ();">
+                </table>
+        </div> <!-- 여기까지 popup부분 -->
+
+        <div id="p2" style="position: absolute; left: 550px; top: 200px; z-index:20; visibility: visible;">
+            <table width=500 height=300>
+                <tr><td style="border: 2px #0000ff solid;"  bgcolor="pink">
+                금일 2시~5시까지 커피 1+1 이벤트 합니다.</td></tr>
+                <input type="button" value="닫기" onclick="kaja2 ();">
+            </table>
+        </div>
+    </body>
+</html>
+<!-- 
+    쿠키(cookie)? 서버에서 만들어서 클라이언트로 전송하는 작은 파일
+
+    크롬에서 전체쿠키보기
+    크롬 브라우저 - 우측 더보기 - 설정 - 고급 - 개인정보 및 보안 - 사이트설정 - 쿠키 - 모든쿠키및 사이트데이터보기
+
+    크롬에서 네이버띄우고 쿠키찾기
+    F12(개발자도구) - application - storage - cookies 
+ -->
