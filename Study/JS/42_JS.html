@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="./jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <h1>식사메뉴</h1>
+        <div class="f1">
+            <p>식사 메뉴</p>
+            <ol id="s1" class="s1">
+                <li>백반</li>
+                <li>돈까스</li>
+                <li>햄버거</li>
+            </ol>
+            <p>후식메뉴</p>
+            <ul class="h1">
+                <li>커피</li>
+                <li>차</li>
+                <li>과일</li>
+            </ul>
+        </div>
+        <script>
+            // alert($(".h1").children().text());
+            // alert($(".h1").children().length);
+            // alert($(".h1>li").siblings().text());
+            // alert($(".h1>li").siblings().length);
+            //커피차과일
+
+            // alert($(".h1").contents().text());
+            // alert($(".h1").append().text());
+            //커피
+            //차
+            //과일
+
+            // alert($(".h1").contents(":first").text());
+            //커피
+
+            // alert($(".h1 li:eq(0)").next().text());
+            //커피
+
+            // alert($(".h1 li:eq(0)").nextAll().text());
+            //차과일
+
+            // alert($(".h1 li:eq(0)").parent().text());
+            // 커피
+            // 차
+            // 과일
+
+            // alert($(".h1 li:eq(1)").prev().text());
+            // 커피
+
+            // alert($(".h1 li:eq(2)").prevAll().text());
+            // 차커피 
+
+            alert($(".h1 li:eq(0)").siblings().css("background-color","pink"));
+            </script>
+    </body>
+</html>
