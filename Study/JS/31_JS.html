@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>KAKAO MAP</title>
+                                                    <!-- = 다음은 각자 받은 스크립트키 -->
+        <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=96446ef80f30cc9d4ad758ddff5bb281"></script>
+        <!-- <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=96446ef80f30cc9d4ad758ddff5bb281"></script> -->
+        <!-- https: 서버 하고안하고 문제인가 ?,, -->
+
+        <script>
+        window.onload=function(){
+        var joongang1 = new daum.maps.LatLng(37.6007565, 126.7195586);
+                        //해당 위도, 경도를 지도의 중앙으로 위치하기 위한 것    
+        var mapDesign1 = {
+                zoom : 15,
+                center : joongang1,
+                mapTypeId : daum.maps.MapTypeId.ROADMAP
+                //mapTypeId : daum.maps.MapTypeId.HYBRID
+                };
+        var map = new daum.maps.Map(document.getElementById("jido1"), mapDesign1);
+        }
+
+        </script>
+
+    </head>
+
+    <body>
+        <div   div id="jido1" style="width : 700px; height : 700px">
+        여기에 지도나온다</div>
+
+    </body>
+</html>
+<!-- 
+    ###
+    geolocation : 지도에 대한게 들어감
+    navigator.geolocation.getCurrentPosition(kajaWich1) : 이게 현재 위도와 경도를 알아내는 메소든데
+    안에 가자위치가있는건(인자)->펑션으로 가야함
+    어제수업시간에 event가 왜 들어가냐 그것처럼 
+    function kajaWich1(wichi1) ){
+ -->

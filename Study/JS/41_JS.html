@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="./jquery-3.5.1.js"></script>
+    </head>
+    <body>
+        <h1 align="left">align align align</h1>
+        <h1 align="left">change align align align</h1>
+        
+        $(this).attr("align","left");
+        <script>
+            $(function(){
+                alert($("h1:first").attr("align"));
+                //attribute : 속성
+                if($(this).attr("align")==left){
+                    $("h1:last").click(function(aaa){
+                        $(this).attr("align","right");
+                    });
+                }else{
+                    $("h1:last").click(function(aaa){
+                        $(this).attr("align","left");
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

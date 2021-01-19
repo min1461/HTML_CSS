@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="./jquery-3.5.1.js"></script>
+    </head>
+    <body>
+        <h1>수를 클릭</h1>
+        <h2>앞수 클릭</h2>
+        <h3 id="front">15</h3>
+        <h2>뒤수 클릭</h2>
+        <h3 id=""back>10</h3>
+        <h2>답 클릭</h2>
+        <h3 id="answer">0</h3>
+        <script>
+            $(function(){
+                var front1, back1
+                $("#front").click(function(){
+                    front1 = $(this).text()
+                });
+                $("#front").click(function(){
+                    back1 = $(this).text()
+                });
+                $("#front").click(function(){
+                    var answer1 = front1 * back1
+                    $(this).text(answer1)
+                });
+            })
+        </script>
+    </body>
+</html>
