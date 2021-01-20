@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="./jquery-3.5.1.min.js"></script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        
+    </body>
+
+    <script>
+        $(function(){
+            var urlArray=[
+                {key:'네이버', value:'http://www.naver.com'},
+                {key:'유튜브', value:'http://www.youtube.co.kr'}
+            ]
+
+            // $.each(인자1,function(인자2,인자3){});
+            //인자1:array 인자2:index(0부터시작) 인자3:item
+            $.each(urlArray,function(key,address){
+                var str="";
+                str+='<a href="'+address.value+'">'
+                    +'+'+key+'번째 인덱스 <h1>'+address.key+'</h1></a>'+'<br>';
+                document.body.innerHTML+=str;
+            });
+        });
+    </script>
+</html>

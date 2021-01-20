@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="./jquery-3.5.1.js"></script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <img src="big_Roller_orange.gif">
+        <h1>가자 거인나라</h1>
+        <div>
+            <img src="../TEST1/fox.png" id="child2">
+        </div>
+    </body>
+    <script>
+        $(function(){
+            $("img").attr("width",50).attr("height",100);
+            $("img:first").attr("width",100);
+            setInterval(function(){
+                $("#child2").animate({width:"+=30"},500)
+                            .animate({height:"+=20"},1000);
+            },1500);
+        })
+    </script>
+</html>

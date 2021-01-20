@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="./jquery-3.5.1.js"></script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div id="first"><h1>먹고싶은 과일 선택하기</h1></div>
+        <div id="second">
+            <select id="select_box">
+                <option value="사과">사과</option>
+                <option value="멜론">메론</option>
+                <option value="바나나">바나나</option>
+                <option value="오렌지">오렌지</option>
+            </select>
+        </div>
+    </body>
+    <script>
+        $(function(){
+            $("#first").mouseenter(function(){
+                $("#second").slideDown('slow');
+                $("#first").hide();
+            }).mouseleave(function(){});
+
+            $("#second").mouseenter(function(){}).mouseleave(function(){
+                $("#second").hide();
+                $("#first").show();
+            })
+        })
+    </script>
+</html>
